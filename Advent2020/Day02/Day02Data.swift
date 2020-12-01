@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class Day02Data {
+
+static let string = """
+   111
+   """
+}
