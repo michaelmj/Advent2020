@@ -8,5 +8,10 @@
 import Foundation
 
 struct Day02 {
-   
+
+   static func partA(_ data: Any ) -> Void {
+   }
+
+   static func partB(_ data: Any ) -> Void {
+   }
 }
