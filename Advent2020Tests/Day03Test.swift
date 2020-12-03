@@ -25,12 +25,12 @@ class Day03Tests: XCTestCase {
 
 
    func testDay03a() throws {
-      XCTAssertEqual( Day03.partA( testData ), 2 )
-      print ( Day03.partA(Day02Data.string) )
+      XCTAssertEqual( Day03.partA( testData ), 7 )
+      print ( Day03.partA(Day03Data.string) )
    }
-//
-//   func testDay03b() throws {
-//      XCTAssertEqual( Day03.partB( testData ), 1 )
-//      print ( Day03.partB( Day03Data.string ) )
-//   }
+
+   func testDay03b() throws {
+    //  XCTAssertEqual( Day03.partB( testData ), 1 )
+      print ( Day03.partB( Day03Data.string ) )
+   }
 }
