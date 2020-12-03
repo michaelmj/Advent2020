@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Day03 {
+   static func partA(_ data: String ) -> Int {
+      return 0
+   }
+
+   static func partB(_ data: String ) -> Int {
+      return 0
+   }
+}
