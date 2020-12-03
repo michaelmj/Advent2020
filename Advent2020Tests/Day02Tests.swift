@@ -10,16 +10,19 @@ import XCTest
 class Day02Tests: XCTestCase {
 
    let testData = """
-   111
-   """
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
+"""
 
 
    func testDay02a() throws {
-      Day02.partA( testData )
-      //Day02.partA(Day02Data.string)
+      XCTAssertEqual( Day02.partA( testData ), 2 )
+      print ( Day02.partA(Day02Data.string) )
    }
 
    func testDay02b() throws {
-      Day02.partB( testData )
+      XCTAssertEqual( Day02.partB( testData ), 1 )
+      print ( Day02.partB( Day02Data.string ) )
    }
 }

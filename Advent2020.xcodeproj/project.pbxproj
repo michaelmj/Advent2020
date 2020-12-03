@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C41775B25768E8E00CCC113 /* Day01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41775A25768E8E00CCC113 /* Day01.swift */; };
+		4C41775C25768E8E00CCC113 /* Day01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41775A25768E8E00CCC113 /* Day01.swift */; };
 		4C5A66C72575F04300B3AB4E /* Advent2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A66C62575F04300B3AB4E /* Advent2020App.swift */; };
 		4C5A66C92575F04300B3AB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A66C82575F04300B3AB4E /* ContentView.swift */; };
 		4C5A66CB2575F04400B3AB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C5A66CA2575F04400B3AB4E /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C41775A25768E8E00CCC113 /* Day01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day01.swift; sourceTree = "<group>"; };
 		4C5A66C32575F04300B3AB4E /* Advent2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Advent2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5A66C62575F04300B3AB4E /* Advent2020App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advent2020App.swift; sourceTree = "<group>"; };
 		4C5A66C82575F04300B3AB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 				4C5A67032575F1F100B3AB4E /* Day01a.swift */,
 				4C5A670A2575F1FC00B3AB4E /* Day01b.swift */,
 				4C5A671725760EC400B3AB4E /* Day01Data.swift */,
+				4C41775A25768E8E00CCC113 /* Day01.swift */,
 			);
 			path = Day01;
 			sourceTree = "<group>";
@@ -252,6 +256,7 @@
 				4C5A67042575F1F100B3AB4E /* Day01a.swift in Sources */,
 				4C5A66C72575F04300B3AB4E /* Advent2020App.swift in Sources */,
 				4C5A67332576117A00B3AB4E /* Day02.swift in Sources */,
+				4C41775B25768E8E00CCC113 /* Day01.swift in Sources */,
 				4C5A6713257609FB00B3AB4E /* Permutations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +272,7 @@
 				4C5A672B257610D700B3AB4E /* Day02Data.swift in Sources */,
 				4C5A671925760EC400B3AB4E /* Day01Data.swift in Sources */,
 				4C5A673A257611E100B3AB4E /* Day02Tests.swift in Sources */,
+				4C41775C25768E8E00CCC113 /* Day01.swift in Sources */,
 				4C5A67052575F1F100B3AB4E /* Day01a.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
