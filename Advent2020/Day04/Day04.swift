@@ -7,52 +7,20 @@
 
 import Foundation
 
-extension Array {
-
-   /// Unzip an `Array` of key/value tuples.
-   ///
-   /// - Returns: A tuple with two arrays, an `Array` of keys and an `Array` of values.
-
-   func unzip<K, V>() -> ([K], [V]) where Element == (key: K, value: V) {
-      var keys = [K]()
-      var values = [V]()
-
-      keys.reserveCapacity(count)
-      values.reserveCapacity(count)
-
-      forEach { key, value in
-         keys.append(key)
-         values.append(value)
-      }
-
-      return (keys, values)
-   }
-}
-
 struct Day04 {
 
-   let requiredCodes = Set(["byr",
-                            "iyr",
-                            "eyr",
-                            "hgt",
-                            "hcl",
-                            "ecl",
-                            "pid"])
-
+   let requiredCodes = Set(["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"])
    let eyeColors = Set(["amb", "blu", "brn", "gry", "grn", "hzl", "oth"])
 
    static func partA(_ data: String ) -> Int {
       let today = Day04()
       let parsed = today.parseData(dataString: data)
 
-      print(parsed)
-
       let correct = parsed.filter {
          Set($0.keys).isSuperset(of: today.requiredCodes)
       }
 
       print(correct)
-
 
       return correct.count
    }
@@ -82,8 +50,6 @@ struct Day04 {
       let today = Day04()
       let parsed = today.parseData(dataString: data)
 
-      print(parsed)
-
       let correct = parsed.filter {
          ( Set($0.keys).isSuperset(of: today.requiredCodes) &&
             Int($0["byr"]!)! >= 1920 && Int($0["byr"]!)! <= 2002 &&
@@ -94,13 +60,8 @@ struct Day04 {
          )
       }
 
-      print(correct)
-
-
       return correct.count
    }
-
-
 
    func parseData( dataString: String) -> [[String:String]] {
 
