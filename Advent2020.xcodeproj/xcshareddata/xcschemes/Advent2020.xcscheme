@@ -48,6 +48,9 @@
                   Identifier = "Day03Tests">
                </Test>
                <Test
+                  Identifier = "Day04Tests">
+               </Test>
+               <Test
                   Identifier = "Day04Tests/testDay04a()">
                </Test>
             </SkippedTests>
