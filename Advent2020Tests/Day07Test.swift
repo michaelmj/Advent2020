@@ -9,19 +9,49 @@ import XCTest
 
 class Day07Test: XCTestCase {
 
-   var day: Day = Day07()
-   var dayData: DayData = Day07Data()
+   var day = Day07()
+   var dayData = Day07Data()
    let testData = """
+light red bags contain 1 bright white bag, 2 muted yellow bags.
+dark orange bags contain 3 bright white bags, 4 muted yellow bags.
+bright white bags contain 1 shiny gold bag.
+muted yellow bags contain 2 shiny gold bags, 9 faded blue bags.
+shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.
+dark olive bags contain 3 faded blue bags, 4 dotted black bags.
+vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.
+faded blue bags contain no other bags.
+dotted black bags contain no other bags.
+"""
+
+   let testData2 = """
+shiny gold bags contain 2 dark red bags.
+dark red bags contain 2 dark orange bags.
+dark orange bags contain 2 dark yellow bags.
+dark yellow bags contain 2 dark green bags.
+dark green bags contain 2 dark blue bags.
+dark blue bags contain 2 dark violet bags.
+dark violet bags contain no other bags.
 """
 
    func testPartA() throws {
-      XCTAssertEqual( day.partA( testData ), 0 )
-//      print ( day.partA(dayData.string) )
+
+      XCTAssertEqual( day.partA( testData, bagCheck: "shiny gold" ), 4 )
+   }
+
+   func testPartAReal() throws {
+      print ( day.partA(dayData.string, bagCheck: "shiny gold" ) )
    }
 
    func testPartB() throws {
-//      XCTAssertEqual( day.partB( testData ), 0 )
-//      print ( day.partB( dayData.string ) )
+      XCTAssertEqual( day.partB( testData, bagCheck: "shiny gold" ), 32 )
+   }
+
+   func testPartB2() throws {
+      XCTAssertEqual( day.partB( testData2, bagCheck: "shiny gold" ), 126 )
+   }
+
+   func testPartBReal() throws {
+      print( day.partB( dayData.string, bagCheck: "shiny gold" ) )
    }
 
 }
