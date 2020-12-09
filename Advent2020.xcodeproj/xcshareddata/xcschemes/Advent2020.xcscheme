@@ -65,6 +65,9 @@
                <Test
                   Identifier = "Day07Test">
                </Test>
+               <Test
+                  Identifier = "Day08Tests">
+               </Test>
             </SkippedTests>
          </TestableReference>
          <TestableReference
