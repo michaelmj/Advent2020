@@ -16,6 +16,11 @@ public extension String {
    }
 }
 
+extension StringProtocol {
+    subscript(offset: Int) -> Character {
+        self[index(startIndex, offsetBy: offset)]
+    }
+}
 
 public struct RegEx {
    private let regex: NSRegularExpression
