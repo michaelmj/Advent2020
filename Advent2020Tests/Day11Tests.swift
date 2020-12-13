@@ -32,6 +32,7 @@ L.LLLLL.LL
       print ( day.partA(dayData.string) )
    }
 
+   
    func testPartB() throws {
       XCTAssertEqual( day.partB( testData ), 26 )
    }
@@ -40,6 +41,8 @@ L.LLLLL.LL
    func testPartBReal() throws {
       print ( day.partB( dayData.string ) )
    }
+
+
 
 }
 
