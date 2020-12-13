@@ -82,7 +82,67 @@ struct Day12  {
       return (abs(position.x) + abs(position.y))
    }
 
+   struct Waypoint {
+      var x:Int
+      var y:Int
+
+      mutating func rotate( deg: Int ) {
+         var newX = 0
+         var newY = 0
+         let deg = (360 + deg) % 360
+
+         switch deg {
+         case 0:
+            print("no change")
+         case 90:
+            newX = y
+            newY = -x
+         case 180:
+            newX = -x
+            newY = -y
+         case 270:
+            newX = -y
+            newY = x
+         default:
+            print("bad turn")
+         }
+         x = newX
+         y = newY
+      }
+   }
+
    func partB(_ data: String ) -> Int {
-      return 0
+      let interim = data.components(separatedBy: "\n").compactMap { $0.split(usingRegex: #"([NSWEWLRF])(\d*)"#) }
+      let steps = interim.flatMap { $0 }.compactMap { Step(m:Movement(rawValue: $0[0])!, v:Int($0[1])!) }
+
+      var shipPos = (x:0, y:0)
+      var wayPoint = Waypoint(x:10, y:1)
+
+      for step in steps {
+         switch step.m {
+         case .E:
+            wayPoint.x += step.v
+         case .W:
+            wayPoint.x -= step.v
+         case .S:
+            wayPoint.y -= step.v
+         case .N:
+            wayPoint.y += step.v
+         case .F:
+            shipPos.x += step.v * wayPoint.x
+            shipPos.y += step.v * wayPoint.y
+         case .R:
+            wayPoint.rotate( deg: step.v )
+         case .L:
+            wayPoint.rotate( deg: -1 * step.v )
+         }
+
+         print ("-----")
+         print( " Position: \(shipPos)" )
+         print( " Waypoint: \(wayPoint)" )
+
+      }
+
+      return (abs(shipPos.x) + abs(shipPos.y))
    }
 }

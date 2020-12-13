@@ -15,7 +15,7 @@ class Day12Tests: XCTestCase {
 F10
 N3
 F7
-L270
+R90
 F11
 """
 
@@ -30,7 +30,7 @@ F11
 
 
    func testPartB() throws {
-      XCTAssertEqual( day.partB( testData ), 26 )
+      XCTAssertEqual( day.partB( testData ), 286 )
    }
 
 
