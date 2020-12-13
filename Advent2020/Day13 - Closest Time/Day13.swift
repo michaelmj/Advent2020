@@ -20,23 +20,21 @@ struct Day13  {
       return buses[index] * (nextTimes[index] - time)
    }
 
-   func partB(_ data: String, hint: Int = 10000) -> Int {
+   func partB(_ data: String) -> Int {
       let buses = data.components(separatedBy: "\n")[1].components(separatedBy: ",")
       let sched = buses.enumerated().filter { $0.element != "x" }.compactMap {
          (index: Int($0.offset), bus: (Int($0.element)!) )
       }
 
-      let minBus = sched[0].bus
-      var time = (Int(hint/minBus) + 1) * minBus
-      outerLoop: repeat {
-         for entry in sched {
-            if ( (time + entry.index) % entry.bus != 0 ) {
-               time += minBus
-               continue outerLoop
-            }
-         }
-         break;
-      } while (true)
+      var increment = 1
+      var time = 0
+
+      for entry in sched {
+         repeat {
+            time += increment
+         } while ( (time + entry.index) % entry.bus != 0 )
+         increment *= entry.bus
+      }
 
       return time
    }

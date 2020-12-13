@@ -32,7 +32,7 @@ class Day13Tests: XCTestCase {
 
 
    func testPartBReal() throws {
-      print ( day.partB( dayData.string, hint: 100000000000000 ) )
+      print ( day.partB( dayData.string) )
    }
 
 
