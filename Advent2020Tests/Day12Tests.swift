@@ -30,7 +30,7 @@ F11
 
 
    func testPartB() throws {
-      XCTAssertEqual( day.partB( testData ), 286 )
+      XCTAssertEqual( day.partB( testData ), 26 )
    }
 
 
