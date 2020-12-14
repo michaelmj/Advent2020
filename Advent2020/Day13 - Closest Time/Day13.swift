@@ -26,7 +26,7 @@ struct Day13  {
          (index: Int($0.offset), bus: (Int($0.element)!) )
       }
 
-      var increment = 1
+      var increment = sched[0].bus
       var time = 0
 
       for entry in sched {
